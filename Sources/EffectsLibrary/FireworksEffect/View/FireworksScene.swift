@@ -101,6 +101,8 @@ class FireworksScene: SKScene {
         
         node.position = point
         addChild(node)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { node.removeFromParent() }
     }
     
     @objc func launchFireworks() {
